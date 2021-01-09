@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57203166-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-57203166-1');
+</script>
+
+	<meta charset="utf-8"> 
+	
+	<title>AnimMorph</title>
+	
+    <link rel="stylesheet" type="text/css" href="/assets/style-ca4d0574b1cf75d51d38fa7102b232247b166b3dbc4d6251f2a97749445c0409.css">
+
+	
+		
+			<link rel="stylesheet" type="text/css" href="/assets/fitvid-421a71d9aa4cb1544968a6c05ccf321ab4637572b5af142217733abeabe38522.css">
+		
+			<link rel="stylesheet" type="text/css" href="/assets/lightbox-14faddce24fbea3c613f4b0cec582913f55257c86e4ea5fb444fb64b5ca38d33.css">
+		
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/common-01afd94c5fc5404526fda0e36bce56be7f497aee94e6eae41b6ee7cc273702e5.js"></script>
+
+	
+		
+            <script type="text/javascript" src="/assets/fitvid-fb5cc9b00f1c726a6cbc05bdfb91c7413dc4e677e984f2de2b743a2c81409ce8.js"></script>
+		
+            <script type="text/javascript" src="/assets/lightbox-980e4215a1638657fbaffe0d1718ef2e842e8d6b86a93b5fc25db44735148c27.js"></script>
+		
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/assets/favicon-b6d79f33fcd930a82e32ecbbbfaa399c7612b5b92163a9ec41abd2c35088ffac.ico" rel="shortcut icon">
+</head>
+
+<body>
+	<header>
+<div class="topbar">
+    <div id="inner-topbar">
+        <a href="/"><h1>Jared Counts</h1></a>
+        <div class="main">
+            <ul>
+                <li>
+                    <h3><a href="/assets/resume-dfcf5d07c2386e34876c76ed1cda91e1ad246e6aadb381414c03e5e923ab78ed.pdf">Resume</a></h3>
+                </li>
+                <li>
+                    <h3><a href="mailto:countsjared@gmail.com">Email</a></h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+
+
+
+	<div id="wrap"><div id="inner-wrap">
+	<div id="content-wrap"><div id="content">
+
+		<h2>AnimMorph</h2>
+<h5>Mesh interpolation</h5>
+
+<div class="video">
+<iframe src="//www.youtube.com/embed/pGdo7IQf_uU?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<p>AnimMorph was my project for <a href=http://people.csail.mit.edu/jsolomon/ target=_blank>Justin Solomon</a>‘s MIT class, Shape Analysis (6.838). For this project, I implemented Chen, Weber, Keren, and Ben-Chen’s paper, “Planar Shape Interpolation with Bounded Distortion.”</p>
+<p>In extension to the paper, I present a way to interpolate between meshes using any generic interpolation or spline based function, such as cubic splines or bezier. Below is an example of a bar mesh being interpolated between three keyframes (red, green, and blue). The top sequence shows the interpolation using Chen, et. al’s method, and the bottom shows my method based on cubic interpolation.</p>
+<img src="/assets/animmorph/linear-vs-cubic-23e5d351d2fbf670d10633575cf516c343d9c2df724a70a6096a366707badd22.png">
+<p>I also show how bezier interpolation may be used to tune the motion of the mesh, shown in the below image. Each row shows a different interpolation with a different control point, modified by a single parameter angle.</p>
+<img src="/assets/animmorph/bezier-angleA-3eb46f9b8a2244a40dd9083871a7d01cbf7460d170dec10d1168e776a6dd25c8.png">
+In general the interpolation seems to work quickly. A single interpolation of this bar mesh on my Surface Pro 3 takes about 2 milliseconds, faster than needed for a real time application.
+<p>The source is <a href=https://github.com/JaredCounts/AnimMorph target=_blank>available on GitHub.</a> Special thanks to Justin Solomon for helping me understand the contents of the paper!</p>
+<h2>Gallery</h2><h5>Click to view</h5><ul class="gallery">                                                                                                                                                                                                                                                                                                                                                                                                                                        <li>                <a href="/assets/animmorph/3-frames-cubic-a7681e75e6915a2c4a08fece0fbb8de9ce57e71620a66f0e3215bb75ccbddd43.png" data-lightbox="animmorph">                    <img src="/assets/animmorph/3-frames-cubic-a7681e75e6915a2c4a08fece0fbb8de9ce57e71620a66f0e3215bb75ccbddd43.png" />                </a>                <noscript>                    <a href="/assets/animmorph/3-frames-cubic-a7681e75e6915a2c4a08fece0fbb8de9ce57e71620a66f0e3215bb75ccbddd43.png">                        <img src="/assets/animmorph/3-frames-cubic-a7681e75e6915a2c4a08fece0fbb8de9ce57e71620a66f0e3215bb75ccbddd43.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/animmorph/bezier-angleA-3eb46f9b8a2244a40dd9083871a7d01cbf7460d170dec10d1168e776a6dd25c8.png" data-lightbox="animmorph">                    <img src="/assets/animmorph/bezier-angleA-3eb46f9b8a2244a40dd9083871a7d01cbf7460d170dec10d1168e776a6dd25c8.png" />                </a>                <noscript>                    <a href="/assets/animmorph/bezier-angleA-3eb46f9b8a2244a40dd9083871a7d01cbf7460d170dec10d1168e776a6dd25c8.png">                        <img src="/assets/animmorph/bezier-angleA-3eb46f9b8a2244a40dd9083871a7d01cbf7460d170dec10d1168e776a6dd25c8.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/animmorph/linear-vs-cubic-23e5d351d2fbf670d10633575cf516c343d9c2df724a70a6096a366707badd22.png" data-lightbox="animmorph">                    <img src="/assets/animmorph/linear-vs-cubic-23e5d351d2fbf670d10633575cf516c343d9c2df724a70a6096a366707badd22.png" />                </a>                <noscript>                    <a href="/assets/animmorph/linear-vs-cubic-23e5d351d2fbf670d10633575cf516c343d9c2df724a70a6096a366707badd22.png">                        <img src="/assets/animmorph/linear-vs-cubic-23e5d351d2fbf670d10633575cf516c343d9c2df724a70a6096a366707badd22.png" />                    </a>                </noscript>            </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+
+
+
+	</div></div>
+	<div id="sidebar">
+    <div class="pages">
+        <ul>
+            
+            
+                
+
+                <li>
+                    <a href="/animmorph/"><h4>AnimMorph</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/materiable/"><h4>Materiable</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/openfold/"><h4>OpenFold</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/flower/"><h4>Flower Gen</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/inform/"><h4>inFORM</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/transform/"><h4>TRANSFORM</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/curtain/"><h4>Curtain</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/solar/"><h4>Solar System Simulation</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/gazelle/"><h4>Gazelle</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/dough/"><h4>Dough</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/nebula/"><h4>Nebula</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/ragdolls/"><h4>Ragdoll Aquarium</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/circus/"><h4>Circus Fluid</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/balls/"><h4>Balls</h4></a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<div id="cleared"></div>
+	</div></div>
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57203166-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-57203166-1');
+</script>
+
+	<meta charset="utf-8"> 
+	
+	<title>Circus Fluid</title>
+	
+    <link rel="stylesheet" type="text/css" href="/assets/style-ca4d0574b1cf75d51d38fa7102b232247b166b3dbc4d6251f2a97749445c0409.css">
+
+	
+		
+			<link rel="stylesheet" type="text/css" href="/assets/gfy-ba406c2349666e4615eeb7220d1f4b1d8edba1e7fe07444544f0ccfba1f07bb0.css">
+		
+			<link rel="stylesheet" type="text/css" href="/assets/lightbox-14faddce24fbea3c613f4b0cec582913f55257c86e4ea5fb444fb64b5ca38d33.css">
+		
+			<link rel="stylesheet" type="text/css" href="/assets/app-4d525962360d41e263f74540ebbe4db83ac98add6732317bc1baf3a5a92a83d9.css">
+		
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/common-01afd94c5fc5404526fda0e36bce56be7f497aee94e6eae41b6ee7cc273702e5.js"></script>
+
+	
+		
+            <script type="text/javascript" src="/assets/gfy-6970d719086f589f41c578a9ebca2fe21230b9387130a0d0f1b345ec308bcf33.js"></script>
+		
+            <script type="text/javascript" src="/assets/lightbox-980e4215a1638657fbaffe0d1718ef2e842e8d6b86a93b5fc25db44735148c27.js"></script>
+		
+            <script type="text/javascript" src="/assets/circus-5c902807f0ca704c0943cbe523faeabd8ecb8ed6920f48ee1f18f340204a803e.js"></script>
+		
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/assets/favicon-b6d79f33fcd930a82e32ecbbbfaa399c7612b5b92163a9ec41abd2c35088ffac.ico" rel="shortcut icon">
+</head>
+
+<body>
+	<header>
+<div class="topbar">
+    <div id="inner-topbar">
+        <a href="/"><h1>Jared Counts</h1></a>
+        <div class="main">
+            <ul>
+                <li>
+                    <h3><a href="/assets/resume-dfcf5d07c2386e34876c76ed1cda91e1ad246e6aadb381414c03e5e923ab78ed.pdf">Resume</a></h3>
+                </li>
+                <li>
+                    <h3><a href="mailto:countsjared@gmail.com">Email</a></h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+
+
+
+	<div id="wrap"><div id="inner-wrap">
+	<div id="content-wrap"><div id="content">
+
+		<h2>Circus Fluid</h2>
+<h5>Colorful wave toy</h5>
+
+<div id="app"></div>
+<p>Click and drag to interact.</p>
+<p><a href="demo.html">Click here for a full-screen demo.</a></p>
+<p><a href="https://github.com/JaredCounts/CircusFluid">The full source can be found on Github.</a></p>
+<p>Circus fluid was originally a Processing app I wrote back in 2011. The idea was to turn a simple wave simulation algorithm into something more artsy/colorful.</p>
+<p>If I recall correctly, I borrowed from the pseudocode in <a href="http://twvideo01.ubm-us.net/o1/vault/gdc08/slides/S6509i1.pdf">Matthias Mueller-Fischer’s “Fast Wave Simulation for Games Using Height Fields” GDC presentation from 2008</a>. The original source of my implementation had a syntax bug in the update logic that still ended up giving pretty good results. It’s fixed in my re-implementation, but the behavior is a bit different now.</p>
+<p>Here is the basic idea behind the wave equations. Pretend the brightness of each pixel is the height of a column of water. For a pixel and its adjacent neighbor, use Hooke’s law to compute the spring force pulling that pixel towards its neighbor’s height. That’s pretty much it. In my app, that force is used to update the velocity, which is then integrated into the height (or “density”) of the pixel.</p>
+<h2>Gallery</h2><h5>Click to view</h5><ul class="gallery">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>                <a href="/assets/circus/render0-98449c5dca482411a145205db64e2baf74d9904e815c1c07925bf6b7c3cff7e7.png" data-lightbox="circus">                    <img src="/assets/circus/render0-98449c5dca482411a145205db64e2baf74d9904e815c1c07925bf6b7c3cff7e7.png" />                </a>                <noscript>                    <a href="/assets/circus/render0-98449c5dca482411a145205db64e2baf74d9904e815c1c07925bf6b7c3cff7e7.png">                        <img src="/assets/circus/render0-98449c5dca482411a145205db64e2baf74d9904e815c1c07925bf6b7c3cff7e7.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/circus/render1-632da726e8861a9c12d981ce063355358b44ffe61acca4b1e818bddfda5550f0.png" data-lightbox="circus">                    <img src="/assets/circus/render1-632da726e8861a9c12d981ce063355358b44ffe61acca4b1e818bddfda5550f0.png" />                </a>                <noscript>                    <a href="/assets/circus/render1-632da726e8861a9c12d981ce063355358b44ffe61acca4b1e818bddfda5550f0.png">                        <img src="/assets/circus/render1-632da726e8861a9c12d981ce063355358b44ffe61acca4b1e818bddfda5550f0.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/circus/render2-bb5445136d68b414787898ea58299de2ad36be7e9faf80732c6f04e37287649a.png" data-lightbox="circus">                    <img src="/assets/circus/render2-bb5445136d68b414787898ea58299de2ad36be7e9faf80732c6f04e37287649a.png" />                </a>                <noscript>                    <a href="/assets/circus/render2-bb5445136d68b414787898ea58299de2ad36be7e9faf80732c6f04e37287649a.png">                        <img src="/assets/circus/render2-bb5445136d68b414787898ea58299de2ad36be7e9faf80732c6f04e37287649a.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/circus/render3-069e9c10aa7ef73f926a53cfc5375da07b2d0d74c1a3355cb88e52e330d685cd.png" data-lightbox="circus">                    <img src="/assets/circus/render3-069e9c10aa7ef73f926a53cfc5375da07b2d0d74c1a3355cb88e52e330d685cd.png" />                </a>                <noscript>                    <a href="/assets/circus/render3-069e9c10aa7ef73f926a53cfc5375da07b2d0d74c1a3355cb88e52e330d685cd.png">                        <img src="/assets/circus/render3-069e9c10aa7ef73f926a53cfc5375da07b2d0d74c1a3355cb88e52e330d685cd.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/circus/render4-67f18c83590f00273b8716c93820c372e7d273b21b2eab5da967d55a121948c8.png" data-lightbox="circus">                    <img src="/assets/circus/render4-67f18c83590f00273b8716c93820c372e7d273b21b2eab5da967d55a121948c8.png" />                </a>                <noscript>                    <a href="/assets/circus/render4-67f18c83590f00273b8716c93820c372e7d273b21b2eab5da967d55a121948c8.png">                        <img src="/assets/circus/render4-67f18c83590f00273b8716c93820c372e7d273b21b2eab5da967d55a121948c8.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/circus/render5-ae744962c8256fb4bba1e958929582c86b694f58633ee8f0344008eb627f62cc.png" data-lightbox="circus">                    <img src="/assets/circus/render5-ae744962c8256fb4bba1e958929582c86b694f58633ee8f0344008eb627f62cc.png" />                </a>                <noscript>                    <a href="/assets/circus/render5-ae744962c8256fb4bba1e958929582c86b694f58633ee8f0344008eb627f62cc.png">                        <img src="/assets/circus/render5-ae744962c8256fb4bba1e958929582c86b694f58633ee8f0344008eb627f62cc.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/circus/render6-da03865dcb4a5590cab67a9af6cd399cd8ba4d89868f7b8cfaba97b0168b082e.png" data-lightbox="circus">                    <img src="/assets/circus/render6-da03865dcb4a5590cab67a9af6cd399cd8ba4d89868f7b8cfaba97b0168b082e.png" />                </a>                <noscript>                    <a href="/assets/circus/render6-da03865dcb4a5590cab67a9af6cd399cd8ba4d89868f7b8cfaba97b0168b082e.png">                        <img src="/assets/circus/render6-da03865dcb4a5590cab67a9af6cd399cd8ba4d89868f7b8cfaba97b0168b082e.png" />                    </a>                </noscript>            </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+
+
+
+	</div></div>
+	<div id="sidebar">
+    <div class="pages">
+        <ul>
+            
+            
+                
+
+                <li>
+                    <a href="/animmorph/"><h4>AnimMorph</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/materiable/"><h4>Materiable</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/openfold/"><h4>OpenFold</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/flower/"><h4>Flower Gen</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/inform/"><h4>inFORM</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/transform/"><h4>TRANSFORM</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/curtain/"><h4>Curtain</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/solar/"><h4>Solar System Simulation</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/gazelle/"><h4>Gazelle</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/dough/"><h4>Dough</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/nebula/"><h4>Nebula</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/ragdolls/"><h4>Ragdoll Aquarium</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/circus/"><h4>Circus Fluid</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/balls/"><h4>Balls</h4></a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<div id="cleared"></div>
+	</div></div>
+
+</body>
+
+</html>

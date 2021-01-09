@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57203166-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-57203166-1');
+</script>
+
+	<meta charset="utf-8"> 
+	
+	<title>Solar System Simulation</title>
+	
+    <link rel="stylesheet" type="text/css" href="/assets/style-ca4d0574b1cf75d51d38fa7102b232247b166b3dbc4d6251f2a97749445c0409.css">
+
+	
+		
+			<link rel="stylesheet" type="text/css" href="/assets/fitvid-421a71d9aa4cb1544968a6c05ccf321ab4637572b5af142217733abeabe38522.css">
+		
+			<link rel="stylesheet" type="text/css" href="/assets/lightbox-14faddce24fbea3c613f4b0cec582913f55257c86e4ea5fb444fb64b5ca38d33.css">
+		
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/common-01afd94c5fc5404526fda0e36bce56be7f497aee94e6eae41b6ee7cc273702e5.js"></script>
+
+	
+		
+            <script type="text/javascript" src="/assets/fitvid-fb5cc9b00f1c726a6cbc05bdfb91c7413dc4e677e984f2de2b743a2c81409ce8.js"></script>
+		
+            <script type="text/javascript" src="/assets/lightbox-980e4215a1638657fbaffe0d1718ef2e842e8d6b86a93b5fc25db44735148c27.js"></script>
+		
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/assets/favicon-b6d79f33fcd930a82e32ecbbbfaa399c7612b5b92163a9ec41abd2c35088ffac.ico" rel="shortcut icon">
+</head>
+
+<body>
+	<header>
+<div class="topbar">
+    <div id="inner-topbar">
+        <a href="/"><h1>Jared Counts</h1></a>
+        <div class="main">
+            <ul>
+                <li>
+                    <h3><a href="/assets/resume-dfcf5d07c2386e34876c76ed1cda91e1ad246e6aadb381414c03e5e923ab78ed.pdf">Resume</a></h3>
+                </li>
+                <li>
+                    <h3><a href="mailto:countsjared@gmail.com">Email</a></h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+
+
+
+	<div id="wrap"><div id="inner-wrap">
+	<div id="content-wrap"><div id="content">
+
+		<h2>Solar System Simulation</h2>
+<h5>Planetary simulator</h5>
+
+<div class="video">
+<iframe src="//www.youtube.com/embed/MPfpLDsvOVQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<p>The “Planet X” video spawned from a series of projects of mine that I started when I was 16 back in 2010.
+It started out when I saw an <a href="https://www.youtube.com/watch?v=S_d-gs0WoUw" target="_blank">amazing video by Scott Manley</a> showcasing a timelapse 2D rendering of asteroids in our solar system as they were getting discovered. I thought that this was so incredible, that I challenged myself to recreate it in 3D.
+I used data from <a href="http://www.naic.edu/~nolan/astorb.html">Edward Bowell’s Asteroid Orbital Elements Database</a>.</p>
+<div class="video">
+<iframe src="//player.vimeo.com/video/14725209?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<p>This is what resulted after about a week of trying to decypher all of the Greek symbols and algebra. At the time, the database had about 500,000 asteroids. In this video you can see that the entire asteroid belt completely dips below the solar system plane on one side.
+A few years later I returned to the project and reworked a lot of the trigonometry. A mismatched sin/cos caused the error from last video. After making some fixes, refactoring the code, and double checking the accuracy of the math, I made a new rendering to the tune of Vivaldi. This time there were 100,000 new asteroids since the last rendering.</p>
+<div class="video">
+<iframe src="//www.youtube.com/embed/OKq6iwJ4E4E?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<p>My first two renderings worked by calculating where along each orbit asteroids were using their “orbital elements.” These elements were basically all of the angles and parameters necessary to plot an approximate curve of the path of any given asteroid or planet.
+It was a grievance to me that this was a plotter and not a simulator, so I started another project with the goal of finding the positions of all these asteroids through physics rather than trigonometric approximation.</p>
+<p>First I took all of the equations from the plotter and derived them in order to approximate the velocity of every asteroid in addition to their positions for any given moment. These initial position/velocities worked as the seed to my simulations.</p>
+<p>I made two different simulators. The first one used fourth-order Runge-Kutta as an integration method. The second one, after suggestions from astronomers on a forum, used Störmer–Verlet integration. My implementation may have been wrong, but it took up to 100 iterations of Störmer–Verlet to get the same stability as 1 iteration of Runge-Kutta!</p>
+<p>Once I had a robust n-body physics engine, I had the freedom to run whatever celestial-scale experiment I wanted. Naturally, my first experiment involved taking this imaginary sun-massed “Planet X,” and setting it on a path through the asteroid belt.</p>
+<h2>Gallery</h2><h5>Click to view</h5><ul class="gallery">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>                <a href="/assets/solar/solar-aftermath-e6d212a19e4a8cfa6c794946a21589cde8ff384c4442c7d172ab3db4bb2468ab.png" data-lightbox="solar">                    <img src="/assets/solar/solar-aftermath-e6d212a19e4a8cfa6c794946a21589cde8ff384c4442c7d172ab3db4bb2468ab.png" />                </a>                <noscript>                    <a href="/assets/solar/solar-aftermath-e6d212a19e4a8cfa6c794946a21589cde8ff384c4442c7d172ab3db4bb2468ab.png">                        <img src="/assets/solar/solar-aftermath-e6d212a19e4a8cfa6c794946a21589cde8ff384c4442c7d172ab3db4bb2468ab.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/solar/solar-dest-b9f1426d4263252e9f84bda604ac6ee1b389188615cdacaf8cc1c1728c6f9498.png" data-lightbox="solar">                    <img src="/assets/solar/solar-dest-b9f1426d4263252e9f84bda604ac6ee1b389188615cdacaf8cc1c1728c6f9498.png" />                </a>                <noscript>                    <a href="/assets/solar/solar-dest-b9f1426d4263252e9f84bda604ac6ee1b389188615cdacaf8cc1c1728c6f9498.png">                        <img src="/assets/solar/solar-dest-b9f1426d4263252e9f84bda604ac6ee1b389188615cdacaf8cc1c1728c6f9498.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/solar/solar-dest2-ccfe9f82bfa132b82d376a619ee3886b3e5f121d47550bfafa14273cef635377.png" data-lightbox="solar">                    <img src="/assets/solar/solar-dest2-ccfe9f82bfa132b82d376a619ee3886b3e5f121d47550bfafa14273cef635377.png" />                </a>                <noscript>                    <a href="/assets/solar/solar-dest2-ccfe9f82bfa132b82d376a619ee3886b3e5f121d47550bfafa14273cef635377.png">                        <img src="/assets/solar/solar-dest2-ccfe9f82bfa132b82d376a619ee3886b3e5f121d47550bfafa14273cef635377.png" />                    </a>                </noscript>            </li>                                                    <li>                <a href="/assets/solar/solar-physics-18aa254dceab3a01eb2d34cfc4b8e215220da345016f8c0429655d23259c2ab1.png" data-lightbox="solar">                    <img src="/assets/solar/solar-physics-18aa254dceab3a01eb2d34cfc4b8e215220da345016f8c0429655d23259c2ab1.png" />                </a>                <noscript>                    <a href="/assets/solar/solar-physics-18aa254dceab3a01eb2d34cfc4b8e215220da345016f8c0429655d23259c2ab1.png">                        <img src="/assets/solar/solar-physics-18aa254dceab3a01eb2d34cfc4b8e215220da345016f8c0429655d23259c2ab1.png" />                    </a>                </noscript>            </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+
+
+
+	</div></div>
+	<div id="sidebar">
+    <div class="pages">
+        <ul>
+            
+            
+                
+
+                <li>
+                    <a href="/animmorph/"><h4>AnimMorph</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/materiable/"><h4>Materiable</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/openfold/"><h4>OpenFold</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/flower/"><h4>Flower Gen</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/inform/"><h4>inFORM</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/transform/"><h4>TRANSFORM</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/curtain/"><h4>Curtain</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/solar/"><h4>Solar System Simulation</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/gazelle/"><h4>Gazelle</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/dough/"><h4>Dough</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/nebula/"><h4>Nebula</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/ragdolls/"><h4>Ragdoll Aquarium</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/circus/"><h4>Circus Fluid</h4></a>
+                </li>
+            
+                
+
+                <li>
+                    <a href="/balls/"><h4>Balls</h4></a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+<div id="cleared"></div>
+	</div></div>
+
+</body>
+
+</html>
